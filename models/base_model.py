@@ -27,14 +27,16 @@ class BaseModel():
 
     def __str__(self):
         """Returns string representation of object"""
-        return ("[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__))
+        return ("[{}] ({}) {}".format(
+                    self.__class__.__name__, self.id, self.__dict__))
 
     def save(self):
         """Updates current datetime when changes are made to object"""
         self.updated_at = datetime.now()
 
     def to_dict(self):
-        """Returns dictionary containing key/value pairs of __dict__ attribute of object"""
+        """Returns dictionary containing key/
+            value pairs of __dict__ attribute of object"""
         dictionary = self.__dict__
         dictionary["__class__"] = self.__class__.__name__
         dictionary["created_at"] = self.created_at.isoformat()
