@@ -3,7 +3,7 @@
 import cmd
 import uuid
 from datetime import datetime
-from models.engine.file_storage import FileStorage
+#from models.engine.file_storage import FileStorage
 
 
 class BaseModel():
@@ -35,7 +35,7 @@ class BaseModel():
     def save(self):
         """Updates current datetime when changes are made to object"""
         self.updated_at = datetime.now()
-        storage.save()
+#        storage.save()
 
     def to_dict(self):
         """Returns dictionary containing key/
