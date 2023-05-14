@@ -4,7 +4,4 @@ from models.engine.file_storage import FileStorage
 import json
 
 storage = FileStorage()
-try:
-    storage.reload()
-except json.JSONDecodeError:
-    print("Error")
+storage.reload()
