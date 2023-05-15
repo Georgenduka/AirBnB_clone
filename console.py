@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""defines the HBnB consosle module"""
 import cmd
 
 
